@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D0C593701BFEBCBD007382CB /* Datos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5936F1BFEBCBD007382CB /* Datos.swift */; };
-		D0C593741BFEC973007382CB /* tipoMasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C593731BFEC973007382CB /* tipoMasa.swift */; };
+		D0C593761BFECD05007382CB /* tipoMasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C593751BFECD05007382CB /* tipoMasa.swift */; };
+		D0C593781BFED471007382CB /* tipoQueso.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C593771BFED471007382CB /* tipoQueso.swift */; };
 		D0E2A5DF1BF9AA8F005DA153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2A5DE1BF9AA8F005DA153 /* AppDelegate.swift */; };
 		D0E2A5E11BF9AA8F005DA153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2A5E01BF9AA8F005DA153 /* ViewController.swift */; };
 		D0E2A5E41BF9AA8F005DA153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E2A5E21BF9AA8F005DA153 /* Main.storyboard */; };
@@ -19,7 +20,8 @@
 
 /* Begin PBXFileReference section */
 		D0C5936F1BFEBCBD007382CB /* Datos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datos.swift; sourceTree = "<group>"; };
-		D0C593731BFEC973007382CB /* tipoMasa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tipoMasa.swift; sourceTree = "<group>"; };
+		D0C593751BFECD05007382CB /* tipoMasa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tipoMasa.swift; sourceTree = "<group>"; };
+		D0C593771BFED471007382CB /* tipoQueso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tipoQueso.swift; sourceTree = "<group>"; };
 		D0E2A5DB1BF9AA8E005DA153 /* pizzas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pizzas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E2A5DE1BF9AA8F005DA153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0E2A5E01BF9AA8F005DA153 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +70,8 @@
 				D0E2A5E71BF9AA8F005DA153 /* LaunchScreen.storyboard */,
 				D0E2A5EA1BF9AA8F005DA153 /* Info.plist */,
 				D0C5936F1BFEBCBD007382CB /* Datos.swift */,
-				D0C593731BFEC973007382CB /* tipoMasa.swift */,
+				D0C593751BFECD05007382CB /* tipoMasa.swift */,
+				D0C593771BFED471007382CB /* tipoQueso.swift */,
 			);
 			path = pizzas;
 			sourceTree = "<group>";
@@ -144,11 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0C593741BFEC973007382CB /* tipoMasa.swift in Sources */,
+				D0C593761BFECD05007382CB /* tipoMasa.swift in Sources */,
 				D0E2A5F31BF9B5A3005DA153 /* tamanoPizza.swift in Sources */,
 				D0C593701BFEBCBD007382CB /* Datos.swift in Sources */,
 				D0E2A5E11BF9AA8F005DA153 /* ViewController.swift in Sources */,
 				D0E2A5DF1BF9AA8F005DA153 /* AppDelegate.swift in Sources */,
+				D0C593781BFED471007382CB /* tipoQueso.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

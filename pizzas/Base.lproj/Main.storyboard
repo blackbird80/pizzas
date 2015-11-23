@@ -3,12 +3,55 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tipo Queso-->
+        <scene sceneID="IO9-oe-Gfv">
+            <objects>
+                <viewController id="xPt-nx-ah0" customClass="tipoQueso" customModule="pizzas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lak-vP-2HW"/>
+                        <viewControllerLayoutGuide type="bottom" id="6kV-pl-nw5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UmH-5i-8Y7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de Queso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S68-EB-Ck2">
+                                <rect key="frame" x="244" y="104" width="112" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0V-LJ-NmS">
+                                <rect key="frame" x="0.0" y="166" width="600" height="216"/>
+                                <animations/>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i0V-LJ-NmS" firstAttribute="leading" secondItem="UmH-5i-8Y7" secondAttribute="leading" id="BEE-F4-mRT"/>
+                            <constraint firstItem="i0V-LJ-NmS" firstAttribute="centerX" secondItem="UmH-5i-8Y7" secondAttribute="centerX" id="D1Z-th-f8N"/>
+                            <constraint firstItem="S68-EB-Ck2" firstAttribute="top" secondItem="lak-vP-2HW" secondAttribute="bottom" constant="40" id="aAI-ET-TNn"/>
+                            <constraint firstItem="i0V-LJ-NmS" firstAttribute="top" secondItem="S68-EB-Ck2" secondAttribute="bottom" constant="41" id="grG-2R-MXu"/>
+                            <constraint firstItem="S68-EB-Ck2" firstAttribute="centerX" secondItem="UmH-5i-8Y7" secondAttribute="centerX" id="s7r-xJ-Hhv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="i0V-LJ-NmS" id="72M-3B-eQO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kN-Dj-zxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325" y="1025"/>
+        </scene>
+        <!--Tipo Masa-->
         <scene sceneID="yLZ-xj-qVS">
             <objects>
-                <viewController id="wDl-Lq-lYw" sceneMemberID="viewController">
+                <viewController id="wDl-Lq-lYw" customClass="tipoMasa" customModule="pizzas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g33-yp-NGy"/>
                         <viewControllerLayoutGuide type="bottom" id="eKF-g6-fny"/>
@@ -16,9 +59,32 @@
                     <view key="view" contentMode="scaleToFill" id="oIx-NF-8aW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de Masa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4K-KX-FmC">
+                                <rect key="frame" x="216" y="120" width="103" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JkQ-aF-aqp">
+                                <rect key="frame" x="57" y="192" width="421" height="216"/>
+                                <animations/>
+                            </pickerView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JkQ-aF-aqp" firstAttribute="centerX" secondItem="oIx-NF-8aW" secondAttribute="centerX" constant="-32.5" id="4bX-3x-pov"/>
+                            <constraint firstItem="JkQ-aF-aqp" firstAttribute="leading" secondItem="oIx-NF-8aW" secondAttribute="leadingMargin" constant="37" id="9xd-cE-Qbx"/>
+                            <constraint firstItem="c4K-KX-FmC" firstAttribute="centerX" secondItem="oIx-NF-8aW" secondAttribute="centerX" constant="-32.5" id="Itv-In-Hfa"/>
+                            <constraint firstItem="JkQ-aF-aqp" firstAttribute="top" secondItem="c4K-KX-FmC" secondAttribute="bottom" constant="51" id="S0n-d4-eQe"/>
+                            <constraint firstItem="JkQ-aF-aqp" firstAttribute="centerY" secondItem="oIx-NF-8aW" secondAttribute="centerY" id="mGJ-OA-omz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="JkQ-aF-aqp" id="SRA-hO-1If"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4L2-N8-Hd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,16 +114,17 @@
                                 <rect key="frame" x="254" y="172" width="93" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Tipo de Masa"/>
+                                <connections>
+                                    <segue destination="wDl-Lq-lYw" kind="show" id="qQy-sC-04h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkx-my-oHG">
                                 <rect key="frame" x="250" y="224" width="101" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Tipo de Queso"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oh-vU-yDC">
-                                <rect key="frame" x="257" y="276" width="86" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Ingredientes"/>
+                                <connections>
+                                    <segue destination="xPt-nx-ah0" kind="show" id="400-NC-qgC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxv-n4-mde">
                                 <rect key="frame" x="232" y="374" width="137" height="30"/>
@@ -87,22 +154,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCE-dQ-944">
-                                <rect key="frame" x="192" y="247" width="216" height="21"/>
-                                <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdF-ER-2Zq">
-                                <rect key="frame" x="192" y="300" width="216" height="21"/>
-                                <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arma tu Pizza!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5H-Ma-acp">
                                 <rect key="frame" x="227" y="83" width="147" height="21"/>
                                 <animations/>
@@ -114,46 +165,49 @@
                                 <color key="textColor" red="0.95285560349999998" green="0.33502155169999998" blue="0.24170258620000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCE-dQ-944">
+                                <rect key="frame" x="192" y="250" width="216" height="21"/>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Iic-oj-3aU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="J5H-Ma-acp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="0lG-q9-UNY"/>
-                            <constraint firstItem="NdF-ER-2Zq" firstAttribute="top" secondItem="bCE-dQ-944" secondAttribute="bottom" constant="32" id="1hY-MK-rkR"/>
                             <constraint firstItem="J5H-Ma-acp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Vi-fc-e4N"/>
                             <constraint firstItem="HQN-no-uDH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7W3-ho-ILg"/>
-                            <constraint firstItem="oxv-n4-mde" firstAttribute="top" secondItem="5Oh-vU-yDC" secondAttribute="bottom" constant="68" id="8eF-6K-TeW"/>
                             <constraint firstItem="fsI-Pf-qKS" firstAttribute="top" secondItem="BVV-fl-SHC" secondAttribute="bottom" constant="22" id="DK5-73-fMc"/>
                             <constraint firstItem="7pu-ot-elR" firstAttribute="leading" secondItem="bCE-dQ-944" secondAttribute="leading" id="FVf-om-60r"/>
-                            <constraint firstItem="oxv-n4-mde" firstAttribute="top" secondItem="NdF-ER-2Zq" secondAttribute="bottom" constant="53" id="ITq-5E-bsF"/>
                             <constraint firstItem="Pkx-my-oHG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jjj-cw-OGA"/>
-                            <constraint firstItem="5Oh-vU-yDC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K7o-St-y9U"/>
                             <constraint firstItem="HQN-no-uDH" firstAttribute="leading" secondItem="7pu-ot-elR" secondAttribute="leading" id="LBZ-ev-tmX"/>
-                            <constraint firstItem="NdF-ER-2Zq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Opd-Na-QbO"/>
+                            <constraint firstItem="bCE-dQ-944" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N0u-05-svs"/>
                             <constraint firstItem="fsI-Pf-qKS" firstAttribute="top" secondItem="HQN-no-uDH" secondAttribute="bottom" constant="8" symbolic="YES" id="WgQ-T3-mmf"/>
                             <constraint firstItem="BVV-fl-SHC" firstAttribute="top" secondItem="J5H-Ma-acp" secondAttribute="bottom" constant="16" id="X6S-KH-n0v"/>
-                            <constraint firstItem="5Oh-vU-yDC" firstAttribute="top" secondItem="Pkx-my-oHG" secondAttribute="bottom" constant="22" id="XMW-FQ-3Nu"/>
-                            <constraint firstItem="bCE-dQ-944" firstAttribute="top" secondItem="7pu-ot-elR" secondAttribute="bottom" constant="31" id="b55-LG-mT6"/>
-                            <constraint firstItem="NdF-ER-2Zq" firstAttribute="leading" secondItem="bCE-dQ-944" secondAttribute="leading" id="bR2-wq-HES"/>
+                            <constraint firstItem="bCE-dQ-944" firstAttribute="top" secondItem="7pu-ot-elR" secondAttribute="bottom" constant="34" id="b55-LG-mT6"/>
                             <constraint firstItem="bCE-dQ-944" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="byC-yk-XoF"/>
                             <constraint firstItem="oxv-n4-mde" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g2y-lD-G8w"/>
                             <constraint firstItem="fsI-Pf-qKS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gds-fF-5MO"/>
                             <constraint firstItem="Pkx-my-oHG" firstAttribute="top" secondItem="fsI-Pf-qKS" secondAttribute="bottom" constant="22" id="lWf-bQ-ME7"/>
                             <constraint firstItem="BVV-fl-SHC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lul-tA-Ag5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oxv-n4-mde" secondAttribute="bottom" constant="196" id="o9O-64-V6W"/>
                             <constraint firstItem="7pu-ot-elR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qzX-EW-AKi"/>
                             <constraint firstItem="Pkx-my-oHG" firstAttribute="top" secondItem="7pu-ot-elR" secondAttribute="bottom" constant="8" symbolic="YES" id="udy-NE-hJ1"/>
                             <constraint firstItem="HQN-no-uDH" firstAttribute="top" secondItem="J5H-Ma-acp" secondAttribute="bottom" constant="39" id="uwg-uh-grD"/>
                             <constraint firstItem="7pu-ot-elR" firstAttribute="top" secondItem="HQN-no-uDH" secondAttribute="bottom" constant="31" id="ygp-O6-IGt"/>
-                            <constraint firstItem="5Oh-vU-yDC" firstAttribute="top" secondItem="bCE-dQ-944" secondAttribute="bottom" constant="8" symbolic="YES" id="zvA-JJ-ybX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="w7B-VN-9Ld"/>
                     <connections>
-                        <outlet property="textIngredientes" destination="NdF-ER-2Zq" id="7dB-qn-h0O"/>
                         <outlet property="textTamano" destination="HQN-no-uDH" id="NIc-32-pnE"/>
                         <outlet property="textTpoMasa" destination="7pu-ot-elR" id="Dva-b2-pXg"/>
                         <outlet property="textTpoQueso" destination="bCE-dQ-944" id="g5y-BJ-6gG"/>
-                        <segue destination="wDl-Lq-lYw" kind="show" id="tYO-gL-o5G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

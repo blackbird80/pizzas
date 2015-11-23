@@ -10,5 +10,8 @@ import Foundation
 
 class SharingManager {
     var tamanoPizza :String = ""
+    var tipoMasa : String = ""
+    var tipoQueso : String = ""
+    var ingredientes = ["","","","",""]
     static let sharedInstance = SharingManager()
 }

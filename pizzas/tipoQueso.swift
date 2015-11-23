@@ -1,5 +1,5 @@
 //
-//  tipoMasa.swift
+//  tipoQueso.swift
 //  pizzas
 //
 //  Created by rocio urtecho on 11/19/15.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class tipoMasa: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
+class tipoQueso: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
 
-    
     @IBOutlet weak var pickerView: UIPickerView!
-    var pickerDataSource = ["", "Delgada", "Crujiente", "Gruesa"]
+    var pickerDataSource = ["", "Mozzarella", "Cheddar", "Parmesano", "Sin Queso"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pickerView.dataSource = self;
-        self.pickerView.delegate = self;        // Do any additional setup after loading the view.
+        self.pickerView.delegate = self;
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +39,7 @@ class tipoMasa: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        SharingManager.sharedInstance.tipoMasa = pickerDataSource[row]
+        SharingManager.sharedInstance.tipoQueso = pickerDataSource[row]
     }
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
@@ -65,7 +65,9 @@ class tipoMasa: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
     //this is for demonstration purposes only.
     func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         return 200
-    }    /*
+    }
+
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
